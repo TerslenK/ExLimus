@@ -24,9 +24,9 @@ public class WoodenKama extends SimpleSlimefunItem<ToolUseHandler> {
     @ParametersAreNonnullByDefault
     public WoodenKama(ItemGroup itemGroup) {
         super(itemGroup, WOODEN_KAMA, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                null, null, null,
-                null, new CustomItemStack(Material.BARRIER, "&cRecipe isn't added yet."), null,
-                null, null, null
+                new ItemStack(Material.OAK_SLAB), new ItemStack(Material.STICK), null,
+                null, new ItemStack(Material.STICK), null,
+                null, new ItemStack(Material.STICK), null
         });
     }
 

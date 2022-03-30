@@ -15,6 +15,11 @@ public class Categories {
             new CustomItemStack(Material.DIAMOND_PICKAXE,
                     "&9Tools")
     );
+    public static final ItemGroup EL_MACHINES = new SubGroup(
+            "el_machines",
+            new CustomItemStack(Material.SCAFFOLDING,
+                    "&5Machines")
+    );
 
     public static final ItemGroup EL_MISC = new SubGroup(
             "el_misc",
@@ -31,6 +36,6 @@ public class Categories {
             "el_main",
             new CustomItemStack(Material.BARREL,
                     "&6Ex Limus"),
-            EL_TOOLS,EL_MISC,EL_VANILLA
+            EL_TOOLS,EL_MACHINES,EL_MISC,EL_VANILLA
     );
 }

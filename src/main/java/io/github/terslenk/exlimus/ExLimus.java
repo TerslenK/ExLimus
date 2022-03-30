@@ -1,6 +1,7 @@
 package io.github.terslenk.exlimus;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
+import io.github.mooy1.infinitylib.metrics.bukkit.Metrics;
 import io.github.terslenk.exlimus.utils.Setup;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 
@@ -15,16 +16,19 @@ public class ExLimus extends AbstractAddon implements SlimefunAddon {
     public void enable() {
         addon = this;
 
-        getLogger().info("---------------------- Ex Limus ----------------------");
-        getLogger().info("Version: v" + getPluginVersion());
-        getLogger().info("--------------------- Information --------------------");
-        getLogger().info("An Addon Created  by TerslenK");
-        getLogger().info("--------------- Issue Information Link ---------------");
-        getLogger().info(getBugTrackerURL());
-        getLogger().info("------------------------------------------------------");
+        getLogger().info(">--------------------- Ex Limus ---------------------<");
+        getLogger().info(" Version: " + getPluginVersion());
+        getLogger().info(">-------------------- Information -------------------<");
+        getLogger().info(" An Addon Created by TerslenK");
+        getLogger().info(">-------------- Issue Information Link --------------<");
+        getLogger().info(" " + getBugTrackerURL());
+        getLogger().info(">----------------------------------------------------<");
 
-        Setup.slimefunitems(this);
-        Setup.vanillaitems(this);
+        Setup.SlimefunItems(this);
+        Setup.VanillaItems(this);
+
+        int pluginId = 14604;
+        Metrics metrics = new Metrics(this, pluginId);
     }
 
     @Override

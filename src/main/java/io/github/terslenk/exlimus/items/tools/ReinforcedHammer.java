@@ -6,18 +6,18 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
-import static io.github.terslenk.exlimus.utils.Items.DUST;
-import static io.github.terslenk.exlimus.utils.Items.STONE_HAMMER;
+import static io.github.terslenk.exlimus.utils.Items.*;
 
-public class StoneHammer extends SimpleSlimefunItem<ToolUseHandler> {
-    public StoneHammer(ItemGroup group) {
-        super(group, STONE_HAMMER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+public class ReinforcedHammer extends SimpleSlimefunItem<ToolUseHandler> {
+    public ReinforcedHammer(ItemGroup group) {
+        super(group, REINFORCED_HAMMER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 new ItemStack(Material.STONE), new ItemStack(Material.STONE), new ItemStack(Material.STONE),
                 null, new ItemStack(Material.STICK), new ItemStack(Material.STONE),
                 new ItemStack(Material.STICK), null, new ItemStack(Material.STONE)
@@ -28,7 +28,7 @@ public class StoneHammer extends SimpleSlimefunItem<ToolUseHandler> {
     @Override
     public ToolUseHandler getItemHandler() {
         return (e, tool, fortune, drops) -> {
-            if (Slimefun.getPermissionsService().hasPermission(e.getPlayer(), StoneHammer.this)) {
+            if (Slimefun.getPermissionsService().hasPermission(e.getPlayer(), ReinforcedHammer.this)) {
 
                 Block block = e.getBlock();
                 ItemStack customdrops = customDrops(block);

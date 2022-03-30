@@ -15,7 +15,7 @@ public class Worm extends SlimefunItem{
     public Worm(ItemGroup group) {
         super(group, WORM, RecipeTypes.KAMA_BREAK, new ItemStack[]{
                 null, null, null,
-                null,new CustomItemStack(Material.OAK_LEAVES,"&fEvery Leave Variant"),null,
+                null,new CustomItemStack(Material.OAK_LEAVES,"&fEvery Leaf Variant"),null,
                 null,null,null
         });
     }

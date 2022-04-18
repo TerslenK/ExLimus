@@ -1,6 +1,7 @@
 package io.github.terslenk.exlimus.items.tools;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
@@ -13,15 +14,10 @@ import org.bukkit.inventory.ItemStack;
 import javax.annotation.Nonnull;
 
 import static io.github.terslenk.exlimus.utils.Items.DUST;
-import static io.github.terslenk.exlimus.utils.Items.STONE_HAMMER;
 
 public class StoneHammer extends SimpleSlimefunItem<ToolUseHandler> {
-    public StoneHammer(ItemGroup group) {
-        super(group, STONE_HAMMER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                new ItemStack(Material.STONE), new ItemStack(Material.STONE), new ItemStack(Material.STONE),
-                null, new ItemStack(Material.STICK), new ItemStack(Material.STONE),
-                new ItemStack(Material.STICK), null, new ItemStack(Material.STONE)
-        });
+    public StoneHammer(ItemGroup group, SlimefunItemStack stack, RecipeType recipeType, ItemStack[] recipe) {
+        super(group, stack, recipeType, recipe);
     }
 
     @Nonnull

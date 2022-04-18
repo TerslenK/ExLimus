@@ -2,6 +2,7 @@ package io.github.terslenk.exlimus.utils;
 
 import io.github.mooy1.infinitylib.groups.MultiGroup;
 import io.github.mooy1.infinitylib.groups.SubGroup;
+import io.github.terslenk.exlimus.ExLimus;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
@@ -38,4 +39,7 @@ public class Categories {
                     "&6Ex Limus"),
             EL_TOOLS,EL_MACHINES,EL_MISC,EL_VANILLA
     );
+    public static void setup(ExLimus el){
+        EL_MAIN.register(el);
+    }
 }

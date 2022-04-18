@@ -21,6 +21,7 @@ public final class ExLimus extends AbstractAddon implements SlimefunAddon {
         getLogger().info(" Version: " + getPluginVersion());
         getLogger().info(">-------------------- Information -------------------<");
         getLogger().info(" An Addon Created by TerslenK");
+        getLogger().info(" With the help of lucasGithuber"); //credits ¯\_(ツ)_/¯
         getLogger().info(">-------------- Issue Information Link --------------<");
         getLogger().info(">-----------------Report issues here-----------------<");
         getLogger().info(" " + getBugTrackerLink());

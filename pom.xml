@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.terslenk.exlimus</groupId>
     <artifactId>ExLimus</artifactId>
-    <version>Unreleased</version>
+    <version>MODIFIED</version> <!-- Dont change this, when you have the addon in builds page, this is for guinea pigs to know its modified-->
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -7,8 +7,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ToolUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import org.bukkit.Material;
 import org.bukkit.Tag;
 import org.bukkit.inventory.ItemStack;
 
@@ -16,18 +14,12 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static io.github.terslenk.exlimus.utils.Items.WOODEN_KAMA;
-
 public class WoodenKama extends SimpleSlimefunItem<ToolUseHandler> {
-    private static final int WORM_CHANCE = ExLimus.getAddon().getConfig().getInt("options.worm-chance");
+    private static final int WORM_CHANCE = ExLimus.config().getInt("kama.worm-chance");
 
     @ParametersAreNonnullByDefault
-    public WoodenKama(ItemGroup itemGroup) {
-        super(itemGroup, WOODEN_KAMA, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-                new ItemStack(Material.OAK_SLAB), new ItemStack(Material.STICK), null,
-                null, new ItemStack(Material.STICK), null,
-                null, new ItemStack(Material.STICK), null
-        });
+    public WoodenKama(ItemGroup group, SlimefunItemStack stack, RecipeType recipeType, ItemStack[] recipe) {
+        super(group, stack, recipeType, recipe);
     }
 
     @Nonnull

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.terslenk.exlimus</groupId>
     <artifactId>ExLimus</artifactId>
-    <version>MODIFIED</version> <!-- Dont change this, when you have the addon in builds page, this is for guinea pigs to know its modified-->
+    <version>MODIFIED</version> <!-- Don't change this, when you have the addon in builds page, this is for guinea pigs to know its modified-->
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -35,7 +35,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.3.0</version>
                 <configuration>
                     <!-- This will exclude any unused classes from libraries to reduce file size, not required -->
                     <minimizeJar>true</minimizeJar>

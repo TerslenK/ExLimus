@@ -68,7 +68,7 @@ public class Hammer extends SimpleSlimefunItem<ToolUseHandler> {
             case COPPER_ORE, DEEPSLATE_COPPER_ORE -> {
                 return new CustomItemStack(SlimefunItems.COPPER_DUST, MULTIPLIER);
             }
-        }
+        };
         return null;
     }
 }

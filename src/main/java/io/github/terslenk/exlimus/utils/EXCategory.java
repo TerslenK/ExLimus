@@ -10,7 +10,7 @@ import lombok.experimental.UtilityClass;
 import org.bukkit.Material;
 
 @UtilityClass
-public class Categories {
+public class EXCategory {
     public static final ItemGroup EL_TOOLS = new SubGroup(
             "el_tools",
             new CustomItemStack(Material.DIAMOND_PICKAXE,

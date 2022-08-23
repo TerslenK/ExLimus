@@ -1,9 +1,6 @@
 options:
   #dont change this, so you will have better support for reporting bugs
   auto-update: true
-kama:
-  #default: 15 (percent)
-  worm-chance: 15
 cooked-apple:
   #amount of half food bars to be restored
   #default: 8

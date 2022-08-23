@@ -1,7 +1,6 @@
 package io.github.terslenk.exlimus.items.tools;
 
-import io.github.terslenk.exlimus.ExLimus;
-import io.github.terslenk.exlimus.utils.Items;
+import io.github.terslenk.exlimus.utils.EXItems;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -14,12 +13,14 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class WoodenKama extends SimpleSlimefunItem<ToolUseHandler> {
-    private static final int WORM_CHANCE = ExLimus.config().getInt("kama.worm-chance");
+public class Kama extends SimpleSlimefunItem<ToolUseHandler> {
+    private final int WORM_CHANCE;
 
     @ParametersAreNonnullByDefault
-    public WoodenKama(ItemGroup group, SlimefunItemStack stack, RecipeType recipeType, ItemStack[] recipe) {
+    public Kama(ItemGroup group, SlimefunItemStack stack, RecipeType recipeType, ItemStack[] recipe, int chance) {
         super(group, stack, recipeType, recipe);
+
+        WORM_CHANCE = chance;
     }
 
     @Nonnull
@@ -27,7 +28,7 @@ public class WoodenKama extends SimpleSlimefunItem<ToolUseHandler> {
         return (e, tool, fortune, drops) -> {
 
             if (Tag.LEAVES.isTagged(e.getBlock().getType()) && ThreadLocalRandom.current().nextInt(100) < WORM_CHANCE) {
-                SlimefunItemStack worm = Items.WORM;
+                SlimefunItemStack worm = EXItems.WORM;
                 drops.add(worm);
             }
         };

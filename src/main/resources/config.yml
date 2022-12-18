@@ -1,6 +1,7 @@
 options:
   #dont change this, so you will have better support for reporting bugs
   auto-update: true
+  give-workbench-on-join: true
 cooked-apple:
   #amount of half food bars to be restored
   #default: 8

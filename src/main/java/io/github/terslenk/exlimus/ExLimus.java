@@ -2,19 +2,19 @@ package io.github.terslenk.exlimus;
 
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
-import io.github.terslenk.exlimus.utils.EXItems;
-import io.github.terslenk.exlimus.utils.EXCategory;
-import io.github.terslenk.exlimus.utils.MCItems;
-import io.github.terslenk.exlimus.utils.MCRecipes;
+
+import io.github.terslenk.exlimus.utils.config.RecipesConfig;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import net.md_5.bungee.api.ChatColor;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 
 
 public final class ExLimus extends AbstractAddon implements SlimefunAddon {
     private static ExLimus addon;
+    private static RecipesConfig recipesConfig;
 
     public ExLimus() {
         super("TerslenK","ExLimus","master","options.auto-update");
@@ -22,11 +22,12 @@ public final class ExLimus extends AbstractAddon implements SlimefunAddon {
     @Override
     public void enable() {
         addon = this;
+        recipesConfig = new RecipesConfig(this);
         CommandSender sender = Bukkit.getConsoleSender();
 
         sender.sendMessage("");
         sender.sendMessage(ChatColor.GOLD + ">--------------------- Ex Limus ---------------------<");
-        sender.sendMessage(ChatColor.GREEN + " Version: " + ChatColor.BOLD + ChatColor.GRAY + getPluginVersion());
+        sender.sendMessage(ChatColor.GREEN + " Version: " + ChatColor.BOLD + ChatColor.BOLD + getPluginVersion());
         sender.sendMessage(ChatColor.GOLD + ">-------------------- Information -------------------<");
         sender.sendMessage(ChatColor.WHITE + " An Addon Created by TerslenK");
         sender.sendMessage("");
@@ -38,10 +39,6 @@ public final class ExLimus extends AbstractAddon implements SlimefunAddon {
 
         new Metrics(this, 14604);
 
-        MCRecipes.setup(this);
-        EXItems.setup(this);
-        EXCategory.setup(this);
-        MCItems.setup(this);
     }
 
     @Override
@@ -55,5 +52,8 @@ public final class ExLimus extends AbstractAddon implements SlimefunAddon {
     }
     public String getBugTrackerLink(){
         return "https://github.com/TerslenK/ExLimus/issues";
+    }
+    public static FileConfiguration getRecipesConfig() {
+        return recipesConfig.getConfig();
     }
 }
